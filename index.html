@@ -1,16 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>샘플</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div>
-        나의 첫 샘플<br>
-        안녕
-    </div>
+<form id="Login">
+    <input required maxlength="10" id="name" type="text" placeholder="당신의 이름을 적어주세요">
+    <input type="submit" value="login">
+</form>
+
+<div class="frame">
+    <button id="showLinkList"  class="custom-btn btnLink" onclick="showLinkList()">LINK</button>
+</div>
+<div id="LINK" style="position:fixed; top:6%; left:1%;">
+    <!--toDo 리스트-->
+    
+    <form id="frmLink">
+        <input type="text" placeholder="NEW LINK" required />
+    </form>
+    
+    <ul id="listLink">
+    </ul>
+</div>
+    
+<h1 id="clock" class="clock">00:00:00</h1>
+<h2 id="h1" class="hidden"></h2>
+<div id="quote" class="quote">
+    <span>명언</span>
+</div>
+<div id="author" class="quote">
+    <span>작가</span>
+</div>
+<div id="weather" class="weather">
+    <span>날씨</span><br>
+    <span>온도</span><br>
+    <span>지역</span>
+</div>
+<div >
+<div id="TODO" >
+<!--toDo 리스트-->
+<form id="frmToDo">
+    <input type="text" placeholder="NEW TODO" required />
+</form>
+<ul id="listToDo">
+</ul>
+</div>
+<div class="frame">
+<button id="showTodoList"  class="custom-btn btnTodo" onclick="showList()">TODO</button>
+</div>
+</div>
 
 
+<script src="js/timer.js"></script>
+<script src="js/greeting.js"></script>
+<script src="js/quotes.js"></script>    
+<script src="js/background.js"></script>    
+<script src="js/weather.js"></script>    
+<script src="js/toDoList.js"></script>   
+<script src="js/linkList.js"></script>   
+<script>
+    
+    var count=1;
+    function showList(){
+        
+        if(count===0){
+            todo.classList.add(HIDDEN_CLASSNAME);
+            count=1;
+        }
+        else{
+            todo.classList.remove(HIDDEN_CLASSNAME);
+            count=0;
+        }
+    }
+</script>
+<script>
+    
+    var count=1;
+    function showLinkList(){
+        
+        if(count===0){
+            link.classList.add(HIDDEN_CLASSNAME);
+            count=1;
+        }
+        else{
+            link.classList.remove(HIDDEN_CLASSNAME);
+            count=0;
+        }
+    }
+</script>
 </body>
 </html>

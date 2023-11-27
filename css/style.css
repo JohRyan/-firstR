@@ -1,0 +1,117 @@
+/*배경화면*/
+body {
+    margin: 0; /* body의 기본 마진 제거 */
+    overflow: hidden; /* 스크롤 바 숨김 */
+}
+
+img {
+    /* 이미지를 화면에 꽉 채우도록 설정 */
+    width: 100vw; /* 뷰포트 너비의 100% */
+    height: 100vh; /* 뷰포트 높이의 100% */
+    background-size: cover;/* 이미지 비율을 유지하면서 요소에 맞게 조정 */
+    position: fixed; /* 이미지를 화면에 고정 */
+    top: 0;
+    left: 0;
+    z-index: -1; /* 다른 요소들보다 뒤로 배치 */
+}
+
+input {
+    width: 100px;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+  }
+
+.hidden{
+    display: none;
+}
+
+/*리스트*/
+#TODO{
+    position: fixed; top:89%; left: 93%;
+    border-radius: 15px;
+    z-index: 1;
+    overflow: hidden;
+    background-color : rgb(255,255,255,0.3);
+    transition: max-height .3s ease,min-height .3s ease,padding .3s ease;
+}
+
+/*버튼*/
+.custom-btn {
+    outline: none;
+    text-align: center;
+  width: 100px;
+  height: 40px;
+  padding: 10px 25px;
+  border: 0;
+  border-radius: 15px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  background-color : rgb(255,255,255,0.3);
+}
+
+/* 1 */
+.btnTodo {
+    position : fixed;
+    top : 93%;
+    left : 93%;
+  transition: all 0.3s ease;
+}
+
+.btnLink {
+    position : fixed;
+    top : 1%;
+    left : 1%;
+  transition: all 0.3s ease;
+}
+
+.clock{
+    text-align: center;
+    font-weight: bold;
+    font-family:monospace;
+    font-size: 6em;
+    text-size-adjust: auto;
+    color: aliceblue;
+}
+
+.quote{
+    text-align: center;
+    font-weight: bold;
+    font-family:monospace;
+    font-size: 1em;
+    text-size-adjust: auto;
+    color: rgb(219, 228, 236);
+}
+
+#h1{
+    text-align: center;
+    font-weight: bold;
+    font-family:monospace;
+    font-size: 2em;
+    text-size-adjust: auto;
+    color: rgb(219, 228, 236);
+}
+
+.weather{
+    position : fixed;
+    top : 1%;
+    left : 90%;
+    padding: 10px 25px;
+    text-align: center;
+    font-weight: bold;
+    font-family:monospace;
+    font-size: 1em;
+    text-size-adjust: auto;
+    border-radius: 15px;
+    color: rgb(219, 228, 236);
+    background-color : rgb(255,255,255,0.3);
+}
